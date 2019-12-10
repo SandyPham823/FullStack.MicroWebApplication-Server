@@ -42,8 +42,8 @@
 * Calling/ Video calling 
 * Find a resturaunt/ places between you and your friends!
 * And so much more!
-	* `Make groups`
-	* `Show off your interests`
-	* `Connect with friends`
+	* Make groups
+	* Show off your interests
+	* Connect with friends
 
 
