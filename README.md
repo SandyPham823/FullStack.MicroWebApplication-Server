@@ -24,11 +24,6 @@
 
 
 
-
-
-
-
-
 ## Project Topics
 
 ### TCP Application
@@ -41,4 +36,14 @@
 	* can view messages live as they are received
 
 <hr>
+
+## Prime 5 Messenger Application
+#### Welcome to group 5's messenger web service! With Prime 5, you can use the 5 senses with:
+* Calling/ Video calling 
+* Find a resturaunt/ places between you and your friends!
+* And so much more!
+	* `Make groups`
+	* `Show off your interests`
+	* `Connect with friends`
+
 
