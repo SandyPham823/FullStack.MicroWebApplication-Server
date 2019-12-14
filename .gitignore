@@ -2,3 +2,9 @@
 /.idea/workspace.xml
 *.DS_Store
 /target/*
+#Intellij files
+.idea
+*.iml
+
+#maven build target
+target/
