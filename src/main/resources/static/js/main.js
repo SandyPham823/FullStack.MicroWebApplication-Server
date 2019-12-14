@@ -45,6 +45,11 @@ function onConnected() {
     connectingElement.classList.add('hidden');
 }
 
+function onNewAccount() {
+
+
+}
+
 
 function onError(error) {
     connectingElement.textContent = 'Could not connect to WebSocket server. Please refresh this page to try again!';
