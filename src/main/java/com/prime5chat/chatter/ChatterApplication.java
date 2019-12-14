@@ -1,5 +1,6 @@
 package com.prime5chat.chatter;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
