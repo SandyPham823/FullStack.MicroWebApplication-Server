@@ -24,11 +24,6 @@
 
 
 
-
-
-
-
-
 ## Project Topics
 
 ### TCP Application
@@ -42,43 +37,13 @@
 
 <hr>
 
+## Prime 5 Messenger Application
+#### Welcome to group 5's messenger web service! With Prime 5, you can use the 5 senses with:
+* Calling/ Video calling 
+* Find a resturaunt/ places between you and your friends!
+* And so much more!
+	* Make groups
+	* Show off your interests
+	* Connect with friends
 
 
-
-
-### Blog Application
-
-#### User Stories to Fulfill  
-* As a client, (not logged in) I
-    * can create new blog posts
-        * A blog post can consist of images and text
-	* can view list of all blog posts
-    * can view blog posts filtered by blog-tag
-	* can view new blog posts upon refreshing the DOM
-
-<hr>
-
-
-
-
-
-### Video Library Application
-
-#### User Stories to Fulfill  
-* As a client, (not logged in) I
-    * can upload new videos
-	* can view list of all videos
-	* can post simple text-comments on a video
-
-
-
-
-
-### Money Management Application
-
-#### User Stories to Fulfill  
-* As a client, (not logged in) I
-	* can create new accounts
-	* deposit money to each account
-	* withdrawl money from each account
-	* transfer money to and from any 2 accounts
