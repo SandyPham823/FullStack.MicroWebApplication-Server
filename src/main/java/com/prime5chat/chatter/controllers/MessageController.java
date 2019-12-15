@@ -22,5 +22,4 @@ public class MessageController {
     public Message sendMessage(@Payload Message message) {
         return message;
     }
-
 }

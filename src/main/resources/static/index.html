@@ -18,7 +18,7 @@
 
 <div id="username-page">
     <div class="username-page-container">
-        <h1 class="title">Type your username</h1>
+        <h1 class="title">Login</h1>
         <form id="usernameForm" name="usernameForm">
             <div class="form-group">
                 <input type="text" id="name" placeholder="Username"
@@ -29,20 +29,18 @@
             <div class="form-group">
                 <button type="submit" class="accent username-submit">Start
                     Chatting</button>
-            </div>
-            <div class="form-group">
-                <button type="button" class="accent">
+                <button type = "button" onclick="goToAccountCreation()" class="accent username-submit">
                     Create new account
                 </button>
-            </div>>
+            </div>
         </form>
     </div>
 </div>
 
 <div id="create-account-page" class="hidden">
     <div class="username-page-container">
-        <h1 class="title">Type your username</h1>
-        <form id="createUsernameForm" name="createUsernameForm">
+        <h1 class="title">Type your new username and password </h1>
+        <form id="createAccountForm" name="createAccountForm">
             <div class="form-group">
                 <input type="text" id="newUsername" placeholder="Username"
                        autocomplete="off" class="form-control" />
@@ -50,8 +48,8 @@
                        autocomplete="off" class="form-control" />
             </div>
             <div class="form-group">
-                <button type="submit" class="accent username-submit">Start
-                    Chatting</button>
+                <button type="button" onclick="goToLogin()" class="accent username-submit">Go Back</button>
+                <button type="submit" class="accent username-submit">Create User</button>
             </div>
         </form>
     </div>
