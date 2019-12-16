@@ -2,6 +2,7 @@
 
 var usernamePage = document.querySelector('#username-page');
 var chatPage = document.querySelector('#chat-page');
+var newAccountPage = document.querySelector('#create-account-page');
 var usernameForm = document.querySelector('#usernameForm');
 var messageForm = document.querySelector('#messageForm');
 var messageInput = document.querySelector('#message');
@@ -10,6 +11,7 @@ var connectingElement = document.querySelector('.connecting');
 
 var stompClient = null;
 var username = null;
+var password = null;
 
 var colors = [
     '#2196F3', '#32c787', '#00BCD4', '#ff5652',
@@ -18,9 +20,11 @@ var colors = [
 
 function connect(event) {
     username = document.querySelector('#name').value.trim();
+    password = document.querySelector('#password').value;
 
-    if(username) {
+    if(username && password) {
         usernamePage.classList.add('hidden');
+        newAccountPage.classList.add('hidden');
         chatPage.classList.remove('hidden');
 
         var socket = new SockJS('/prime5chatter');
@@ -31,7 +35,6 @@ function connect(event) {
     event.preventDefault();
 }
 
-
 function onConnected() {
     // Subscribe to the Public Topic
     stompClient.subscribe('/topic/public', onMessageReceived);
@@ -40,9 +43,46 @@ function onConnected() {
     stompClient.send("/app/chat.register",
         {},
         JSON.stringify({sender: username, type: 'JOIN'})
-    )
+    );
+    stompClient.send("/app/chat.createUser",
+        {},
+        JSON.stringify({sender: username, type: 'CHAT'})
+    );
 
     connectingElement.classList.add('hidden');
+}
+
+function goToAccountCreation(event) {
+    usernamePage.classList.add('hidden');
+    newAccountPage.classList.remove('hidden');
+    event.preventDefault();
+}
+
+function goToLogin(event){
+    newAccountPage.classList.add('hidden');
+    usernamePage.classList.remove('hidden');
+    event.preventDefault();
+}
+
+function createAccount(event) {
+    username = document.querySelector('#newUsername').value.trim();
+    password = document.querySelector('#newPassword').value;
+
+    if (username && password) {
+        usernamePage.classList.add('hidden');
+        newAccountPage.classList.add('hidden');
+        chatPage.classList.remove('hidden');
+        var socket = new SockJS('/prime5chatter');
+        stompClient = Stomp.over(socket);
+
+        stompClient.connect({}, onConnected, onError);
+    }
+    event.preventDefault();
+}
+
+function onCreateAccount() {
+
+
 }
 
 
@@ -112,10 +152,11 @@ function getAvatarColor(messageSender) {
     for (var i = 0; i < messageSender.length; i++) {
         hash = 31 * hash + messageSender.charCodeAt(i);
     }
-
     var index = Math.abs(hash % colors.length);
     return colors[index];
 }
 
-usernameForm.addEventListener('submit', connect, true)
-messageForm.addEventListener('submit', send, true)
+
+usernameForm.addEventListener('submit', connect, true);
+newAccountPage.addEventListener('submit', createAccount, true);
+messageForm.addEventListener('submit', send, true);
