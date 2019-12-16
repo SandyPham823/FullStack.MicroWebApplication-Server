@@ -140,9 +140,11 @@ function onMessageReceived(payload) {
         messageElement.appendChild(usernameElement);
 
 
+
         var timestamp = document.createElement('time');
         timestamp.innerText = message.timestamp;
         messageElement.appendChild(timestamp)
+
     }
 
     var textElement = document.createElement('p');
