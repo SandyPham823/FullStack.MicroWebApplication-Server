@@ -14,13 +14,22 @@ public class MessageController {
     @SendTo("/topic/public")
     public Message register(@Payload Message message, SimpMessageHeaderAccessor headerAccessor){
         headerAccessor.getSessionAttributes().put("username", message.getSender());
+        System.out.println("REGISTER METHOD HAS BEEN CALLED");
+        System.out.println(message.getType());
         return message;
     }
 
     @MessageMapping("/chat.send")
     @SendTo("/topic/public")
-    public Message sendMessage(@Payload Message message){
+     public Message sendMessage(@Payload Message message){
+        System.out.println("SENDMESSAGE METHOD HAS BEEN CALLED");
+        System.out.println(message.getType());
         return message;
     }
 
+    @MessageMapping("/chat.leave")
+    @SendTo("/topic/public")
+    public Message logout(@Payload Message message) {
+        return message;
+    }
 }
