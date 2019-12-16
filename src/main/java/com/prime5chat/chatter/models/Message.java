@@ -33,7 +33,7 @@ public class Message {
     }
 
     public enum MessageType{
-        CHAT, LEAVE, JOIN
+        CHAT, LEAVE, JOIN, NOTAMESSAGE
     }
 
     public String getContent() {
