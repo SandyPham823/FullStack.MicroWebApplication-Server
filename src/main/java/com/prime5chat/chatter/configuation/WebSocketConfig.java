@@ -12,7 +12,9 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/prime5chatter").setAllowedOrigins("*").withSockJS();
+        registry.addEndpoint("/prime5chatter")
+                .setAllowedOrigins("*")
+                .withSockJS();
     }
 
     @Override
