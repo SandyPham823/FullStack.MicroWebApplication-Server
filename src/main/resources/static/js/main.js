@@ -112,6 +112,8 @@ function send(event) {
 function onMessageReceived(payload) {
     var message = JSON.parse(payload.body);
 
+    console.log(message);
+
     var messageElement = document.createElement('li');
 
     if(message.type === 'JOIN') {
@@ -134,6 +136,11 @@ function onMessageReceived(payload) {
         var usernameText = document.createTextNode(message.sender);
         usernameElement.appendChild(usernameText);
         messageElement.appendChild(usernameElement);
+
+
+        var timestamp = document.createElement('time');
+        timestamp.innerText = message.timestamp;
+        messageElement.appendChild(timestamp)
     }
 
     var textElement = document.createElement('p');
