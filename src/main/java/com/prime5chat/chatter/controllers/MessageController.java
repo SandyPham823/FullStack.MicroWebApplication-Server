@@ -34,7 +34,9 @@ public class MessageController {
     @SendTo("/topic/public")
      public Message sendMessage(@Payload Message message){
         System.out.println("SENDMESSAGE METHOD HAS BEEN CALLED");
+        System.out.println(message.getSender());
         System.out.println(message.getType());
+        System.out.println(message.getContent());
         return message;
     }
 
