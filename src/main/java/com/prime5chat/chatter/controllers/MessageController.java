@@ -32,12 +32,4 @@ public class MessageController {
     public Message logout(@Payload Message message) {
         return message;
     }
-
-    @MessageMapping("/chat.createUser")
-    @SendTo("/topic/public")
-    public Message createUser(@Payload Message message) {
-        System.out.println("CREATEUSER METHOD HAS BEEN CALLED");
-        return message;
-    }
-
 }

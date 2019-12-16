@@ -9,5 +9,10 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class UserController {
 
+    @MessageMapping("/chat.createUser")
+    public Message createUser(@Payload Message message) {
+        System.out.println("CREATEUSER METHOD HAS BEEN CALLED");
+        return message;
+    }
 
 }
