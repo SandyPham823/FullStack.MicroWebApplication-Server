@@ -1,6 +1,8 @@
 package com.prime5chat.chatter.controllers;
 
 import com.prime5chat.chatter.models.Message;
+import com.prime5chat.chatter.services.MessageServices;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -9,6 +11,13 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class MessageController {
+
+    private MessageServices messageServices;
+
+    @Autowired
+    public MessageController(MessageServices messageServices){
+        this.messageServices = messageServices;
+    }
 
     @MessageMapping("/chat.register")
     @SendTo("/topic/public")
