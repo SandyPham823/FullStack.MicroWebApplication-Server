@@ -40,9 +40,10 @@ function onConnected() {
     stompClient.subscribe('/topic/public', onMessageReceived);
 
     // Tell your username to the server
-    stompClient.send("/app/chat.register",
+
+    stompClient.send("/app/chat.createUser",
         {},
-        JSON.stringify({sender: username, type: 'JOIN'})
+        JSON.stringify({sender: username, type: 'NOTAMESSAGE'})
     );
 
     connectingElement.classList.add('hidden');

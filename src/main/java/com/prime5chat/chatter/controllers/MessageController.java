@@ -14,12 +14,28 @@ public class MessageController {
     @SendTo("/topic/public")
     public Message register(@Payload Message message, SimpMessageHeaderAccessor headerAccessor){
         headerAccessor.getSessionAttributes().put("username", message.getSender());
+        System.out.println("register method has been called");
         return message;
     }
 
     @MessageMapping("/chat.send")
     @SendTo("/topic/public")
-    public Message sendMessage(@Payload Message message) {
+     public Message sendMessage(@Payload Message message){
+        System.out.println("sendMessage method has been called");
         return message;
     }
+
+    @MessageMapping("/chat.leave")
+    @SendTo("/topic/public")
+    public Message logout(@Payload Message message) {
+        return message;
+    }
+
+    @MessageMapping("/chat.createUser")
+    @SendTo("/topic/public")
+    public Message createUser(@Payload Message message) {
+        System.out.println("CREATE USER METHOD HAS BEEN CALLED");
+        return message;
+    }
+
 }
