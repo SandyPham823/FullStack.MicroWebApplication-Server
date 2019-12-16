@@ -254,6 +254,12 @@ button.accent {
     font-weight: 600;
 }
 
+#chat-page .chat-message time {
+    color: #777;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
 #chat-page .chat-message p {
     color: #43464b;
 }
