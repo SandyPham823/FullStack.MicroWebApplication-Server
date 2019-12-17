@@ -8,6 +8,7 @@ var messageForm = document.querySelector('#messageForm');
 var messageInput = document.querySelector('#message');
 var messageArea = document.querySelector('#messageArea');
 var connectingElement = document.querySelector('.connecting');
+var sideBar = document.querySelector('#sidebar');
 
 var stompClient = null;
 var username = null;
@@ -26,6 +27,7 @@ function connect(event) {
         usernamePage.classList.add('hidden');
         newAccountPage.classList.add('hidden');
         chatPage.classList.remove('hidden');
+        sideBar.classList.remove('hidden');
 
         var socket = new SockJS('/prime5chatter');
         stompClient = Stomp.over(socket);
@@ -38,17 +40,16 @@ function connect(event) {
 function onConnected() {
     // Subscribe to the Public Topic
     stompClient.subscribe('/topic/public', onMessageReceived);
-
     // Tell your username to the server
     stompClient.send("/app/chat.register",
         {},
         JSON.stringify({sender: username, type: 'JOIN'})
     );
+
     stompClient.send("/app/chat.createUser",
         {},
-        JSON.stringify({sender: username, type: 'CHAT'})
+        JSON.stringify({sender: username, type: 'NOTAMESSAGE'})
     );
-
     connectingElement.classList.add('hidden');
 }
 
@@ -72,6 +73,7 @@ function createAccount(event) {
         usernamePage.classList.add('hidden');
         newAccountPage.classList.add('hidden');
         chatPage.classList.remove('hidden');
+        sideBar.classList.remove('hidden');
         var socket = new SockJS('/prime5chatter');
         stompClient = Stomp.over(socket);
 
@@ -112,6 +114,8 @@ function send(event) {
 function onMessageReceived(payload) {
     var message = JSON.parse(payload.body);
 
+    console.log(message);
+
     var messageElement = document.createElement('li');
 
     if(message.type === 'JOIN') {
@@ -134,6 +138,13 @@ function onMessageReceived(payload) {
         var usernameText = document.createTextNode(message.sender);
         usernameElement.appendChild(usernameText);
         messageElement.appendChild(usernameElement);
+
+
+
+        var timestamp = document.createElement('time');
+        timestamp.innerText = message.timestamp;
+        messageElement.appendChild(timestamp)
+
     }
 
     var textElement = document.createElement('p');
