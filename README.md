@@ -36,13 +36,12 @@
 	* can view messages live as they are received
 
 <hr>
-#### How to run locally:
+## Running Application:
+
+#### Locally
 * Clone from dev
 * Run Spring application, wait until it finishes set up
 * On web browser go to http://localhost:8000/
-
-
-
 
 
 
