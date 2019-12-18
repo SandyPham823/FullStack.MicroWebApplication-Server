@@ -37,7 +37,7 @@
 
 <hr>
 #### How to run locally
-1.) Go to https://prime5chatter.cfapps.io/
+* 1.) Go to https://prime5chatter.cfapps.io/
 <hr>
 
 ## Prime 5 Messenger Application
