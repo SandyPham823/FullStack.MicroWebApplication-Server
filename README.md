@@ -44,7 +44,7 @@
 
 
 
-#### Live Demo:
+#### Live Demo
 * Go to https://prime5chatter.cfapps.io/
 
 
