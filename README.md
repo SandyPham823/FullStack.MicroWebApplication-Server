@@ -36,8 +36,13 @@
 	* can view messages live as they are received
 
 <hr>
-#### How to run locally
-* 1.) Go to https://prime5chatter.cfapps.io/
+#### How to run locally:
+* Clone from dev
+* Run Spring application
+* On web browser go to http://localhost:8000/
+
+#### Live Demo:
+* Go to https://prime5chatter.cfapps.io/
 <hr>
 
 ## Prime 5 Messenger Application
