@@ -20,11 +20,11 @@
 * Install [Heroku](). From terminal execute
 	* `brew tap heroku/brew && brew install heroku`
 
-<hr><hr>
+<hr>
 
 
 
-## Project Topics
+## Project Topic:
 
 ### TCP Application
 
@@ -35,6 +35,9 @@
 	* can view all accessible channels
 	* can view messages live as they are received
 
+<hr>
+#### How to run locally
+1.) Go to https://prime5chatter.cfapps.io/
 <hr>
 
 ## Prime 5 Messenger Application
