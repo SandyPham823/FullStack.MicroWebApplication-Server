@@ -37,8 +37,10 @@
 
 <hr>
 #### How to run locally:
-
-
+* Clone from dev
+* Run Spring application, wait until it finishes set up
+* On web browser go to http://localhost:8000/
+<hr>
 #### Live Demo:
 * Go to https://prime5chatter.cfapps.io/
 <hr>
