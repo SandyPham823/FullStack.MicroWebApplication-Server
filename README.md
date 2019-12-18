@@ -35,7 +35,6 @@
 	* can view all accessible channels
 	* can view messages live as they are received
 
-<hr>
 ## Running Application:
 
 #### Locally
@@ -47,7 +46,7 @@
 
 #### Live Demo:
 * Go to https://prime5chatter.cfapps.io/
-<hr>
+
 
 ## Prime 5 Messenger Application
 #### Welcome to group 5's messenger web service! With Prime 5, you can use the 5 senses with:
