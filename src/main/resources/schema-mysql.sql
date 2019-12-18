@@ -46,5 +46,5 @@ CREATE TABLE IF NOT EXISTS chat_messages(
 
 SET sql_notes = 1;      -- And then re-enable the warning again
 
-
  */
+
