@@ -1,3 +1,4 @@
+/*
 SET sql_notes = 0;      -- Temporarily disable the "Table already exists" warning
 
 CREATE TABLE IF NOT EXISTS chat_user_profile(
@@ -35,10 +36,15 @@ CREATE TABLE IF NOT EXISTS users_groups(
 
 CREATE TABLE IF NOT EXISTS chat_messages(
     MSG_ID BIGINT (11) NOT NULL AUTO_INCREMENT,
-    GROUP_ID BIGINT (11) NOT NULL,
-    USER_ID BIGINT (11) NOT NULL,
-    MSG_TIMESTAMP TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    GROUP_ID BIGINT (11) NULL,
+    USER1_ID BIGINT (11) NULL,
+    USER2_ID BIGINT (11) NULL DEFAULT 0,
+    MSG_TIMESTAMP TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    MESSAGE VARCHAR (255) NOT NULL
 );
 
 
 SET sql_notes = 1;      -- And then re-enable the warning again
+
+ */
+

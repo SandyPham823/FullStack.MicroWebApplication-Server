@@ -20,11 +20,11 @@
 * Install [Heroku](). From terminal execute
 	* `brew tap heroku/brew && brew install heroku`
 
-<hr><hr>
+<hr>
 
 
 
-## Project Topics
+## Project Topic:
 
 ### TCP Application
 
@@ -35,7 +35,18 @@
 	* can view all accessible channels
 	* can view messages live as they are received
 
-<hr>
+## Running Application:
+
+#### Locally
+* Clone from dev
+* Run Spring application, wait until it finishes set up
+* On web browser go to http://localhost:8080/
+
+
+
+#### Live Demo
+* Go to https://prime5chatter.cfapps.io/
+
 
 ## Prime 5 Messenger Application
 #### Welcome to group 5's messenger web service! With Prime 5, you can use the 5 senses with:
