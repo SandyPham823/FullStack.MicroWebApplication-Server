@@ -3,22 +3,12 @@
 * **Purpose** - to demonstrate the construction of a full-stacked web-application
 
 ## Developmental Notes
-### Minimum Tech Stack
+### Tech Stack used:
 * **Wireframe** - Mockflow
-* **Frontend** - Angular / React
+* **Frontend** - Angular
 * **Business Logic** - Java
 * **Data Layer** - MySQL
-* **Cloud** - Heroku
-
-### Installation
-* Install [NodeJs](https://nodejs.org/en/). From terminal execute
-    * `brew install node`
-* Install [Angular](http://angular.io/). From terminal execute
-    * `brew install angular-cli`
-* Install [AngularCli](). From terminal execute
-    * `npm install -g @angular/cli`
-* Install [Heroku](). From terminal execute
-	* `brew tap heroku/brew && brew install heroku`
+* **Cloud** - Cloud Foundry
 
 <hr>
 
@@ -51,7 +41,6 @@
 ## Prime 5 Messenger Application
 #### Welcome to group 5's messenger web service! With Prime 5, you can use the 5 senses with:
 * Calling/ Video calling 
-* Find a resturaunt/ places between you and your friends!
 * And so much more!
 	* Make groups
 	* Show off your interests
